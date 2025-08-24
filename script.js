@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize AOS
+    // --- Initialize AOS ---
     AOS.init({
         duration: 1000,
         offset: 100,
@@ -35,36 +35,43 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- UNMATCHED CRAFTING VERTICAL SLIDER ---
     const unmatchedContainer = document.querySelector('.unmatchedCraftingImg');
 
-    // Wait for all images to load before initializing Swiper
-    const unmatchedImages = unmatchedContainer.querySelectorAll('img');
-    let loadedCount = 0;
+    if (unmatchedContainer) {
+        const unmatchedImages = unmatchedContainer.querySelectorAll('img');
+        let loadedCount = 0;
 
-    unmatchedImages.forEach(img => {
-        if (img.complete) loadedCount++;
-        else img.addEventListener('load', () => {
-            loadedCount++;
-            if (loadedCount === unmatchedImages.length) initUnmatchedSwiper();
+        unmatchedImages.forEach(img => {
+            if (img.complete) loadedCount++;
+            else img.addEventListener('load', () => {
+                loadedCount++;
+                if (loadedCount === unmatchedImages.length) initUnmatchedSwiper();
+            });
         });
-    });
 
-    if (loadedCount === unmatchedImages.length) initUnmatchedSwiper();
+        if (loadedCount === unmatchedImages.length) initUnmatchedSwiper();
+    }
 
     function initUnmatchedSwiper() {
-        new Swiper(unmatchedContainer, {
+        const unmatchedSwiper = new Swiper(unmatchedContainer, {
             direction: 'vertical',
             loop: true,
             slidesPerView: 1,
             spaceBetween: 0,
             autoplay: { delay: 4000, disableOnInteraction: false },
+            effect: 'slide',
             pagination: {
                 el: unmatchedContainer.querySelector('.swiper-pagination'),
                 clickable: true,
+                type: 'bullets'
             },
-            effect: 'slide',
             observer: true,
             observeParents: true,
             preloadImages: true,
             updateOnImagesReady: true,
         });
+
+        // Force Swiper to render pagination after images load
+        unmatchedSwiper.update();
+        unmatchedSwiper.pagination.render();
+        unmatchedSwiper.pagination.update();
     }
 });
