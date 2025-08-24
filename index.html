@@ -5,21 +5,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calgary Properties</title>
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <section class="ourProjectWrap">
-    <div class="ourProjectHead">
+  <!-- Discover Section -->
+  <section class="discoverWrap">
+    <!-- Swiper Slider -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/home/dicover-slide-1.jpg" alt="discover" class="img-fluid">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home/dicover-slide-2.jpg" alt="discover" class="img-fluid">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home/dicover-slide-3.jpg" alt="discover" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Pagination (left side) -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation buttons (bottom-right) -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Slide counter -->
+      <div class="swiper-counter">
+        <span class="current">1 </span>
+        <span class="separator"></span>
+        <span class="total"> 3</span>
+      </div>
+
+
+      <!-- Overlay Content -->
+      <div class="discoverCont">
+        <h3 class="commonHead">
+          Discover a <em></em> personalized <em></em> journey with us, <em></em> that enhances your life.
+        </h3>
+        <a href="javascript:void(0)" class="exploreBtn">Explore More</a>
+      </div>
+  </section>
+
+  <section class="unmatchedCraftingWrap">
+    <div class="unmatchedCraftingCont">
+      <h3 class="commonHead">
+        Unmatched <em></em>
+        Crafting of <em></em>
+        Aspirational <em></em>
+        Living
+      </h3>
+      <p>
+        Timeless masterpieces that <em></em>
+        redefine the art of living—where <em></em>
+        every detail reflects unmatched <em></em>
+        luxury and a legacy built to <em></em>
+        endure.
+      </p>
+    </div>
+
+    <!-- Vertical Swiper Slider -->
+    <div class="unmatchedCraftingImg swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/home/unmatched-slide-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home/unmatched-slide-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home/unmatched-slide-3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home/unmatched-slide-4.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Our Project Section -->
+  <section class=" ourProjectWrap">
+    <div class="ourProjectHead" data-aos="fade-down">
       <h5>Our Project</h5>
       <h3 class="commonHead">
         Aspirational seaside living, designed <em></em>
@@ -27,19 +113,45 @@
         flexibility and flair.
       </h3>
     </div>
-<div class="ourProjectImgSectionWrap">
-<div class="ourProjectImgSec">
-<img src="images/home/" alt="">
-</div>
-</div>
+
+    <div class="ourProjectImgSectionWrap">
+      <div class="ourProjectImgSec projectImg1">
+        <img src="images/home/project-1.jpg" alt="project 1" class="img-fluid">
+        <h3 class="commonHead" data-aos="fade-right">
+          Live in <em></em> aspirational <em></em> luxury.
+        </h3>
+      </div>
+
+      <div class="ourProjectImgSec projectImg2">
+        <img src="images/home/project-3.jpg" alt="project 2" class="img-fluid">
+        <h3 class="commonHead" data-aos="fade-left" data-aos-delay="100">
+          Aspirational luxury for <em></em> exclusive communities, <em></em> built on agility.
+        </h3>
+      </div>
+
+      <div class="ourProjectImgSec projectImg3">
+        <img src="images/home/project-4.jpg" alt="project 3" class="img-fluid">
+        <h3 class="commonHead" data-aos="fade-right" data-aos-delay="200">
+          Experience <em></em> unparalleled <em></em> luxury in <em></em> every detail
+        </h3>
+      </div>
+
+      <div class="ourProjectImgSec projectImg4">
+        <img src="images/home/project-2.jpg" alt="project 4" class="img-fluid">
+        <h3 class="commonHead" data-aos="fade-left" data-aos-delay="300">
+          Where <em></em> Aspirational Luxury <em></em> Becomes Reality
+        </h3>
+      </div>
+    </div>
+
   </section>
 
+  <!-- Our Esteemed Partners -->
   <section class="ourEsteemedPartnersWrap">
-    <!-- <div class="container"> -->
     <div class="row">
       <div class="ourEsteemedPartnersCont">
         <!-- Left Content -->
-        <div class="ourEsteemedPartnersContLft">
+        <div class="ourEsteemedPartnersContLft" data-aos="fade-right">
           <h4>Our<em></em> Esteemed<em></em> Partners</h4>
           <p>
             Partnering with <b>OCTA</b> Properties and <b>Excube</b>, we unite <em></em>
@@ -47,20 +159,28 @@
             integrity and excellence.
           </p>
         </div>
+
         <!-- Partner Logos -->
-        <div class="ourEsteemedPartnersLogos">
+        <div class="ourEsteemedPartnersLogos" data-aos="fade-up" data-aos-delay="100">
           <img src="images/home/octa-logo.png" alt="OCTA Properties" title="OCTA" class="img-fluid">
         </div>
-        <div class="ourEsteemedPartnersLogos">
+        <div class="ourEsteemedPartnersLogos" data-aos="fade-up" data-aos-delay="200">
           <img src="images/home/excube-logo.png" alt="Excube Properties" title="Excube" class="img-fluid">
         </div>
       </div>
     </div>
-    <!-- </div> -->
   </section>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
 </body>
 
 </html>
