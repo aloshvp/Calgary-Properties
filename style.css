@@ -1,3 +1,25 @@
-body {
-    background-color: antiquewhite;
+:root {
+  --regular: 'Inter', Arial, sans-serif;
+  --head: 'Playfair Display', Georgia, serif;
+
+  --normal: 400;
+  --bold: 600;
 }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {font-family: var(--font-body-family);font-weight: var(--regular);font-size: 16px;line-height: 1.6;color: #000;margin: 0;background-color: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+.commonHead{font-size: 36px;line-height: 1.3em;margin:0;font-family: var(--head);font-weight: var(--normal);color: #333F49;}
+
+.ourEsteemedPartnersWrap {padding: 100px 80px;}
+.ourEsteemedPartnersCont{display: flex;justify-content: space-between;grid-gap: 60px;justify-content: center;align-items: center;}
+.ourEsteemedPartnersCont > div{flex: 1;}
+.ourEsteemedPartnersContLft > h4 {font-size: 56px;line-height: 1.4em;margin: 0 0 15px ;color: #333F49;font-weight: 400;}
+.ourEsteemedPartnersContLft > h4 > em {display: block;}
+.ourEsteemedPartnersContLft > p {font-size: 14px;line-height: 1.8em;margin: 0;}
+.ourEsteemedPartnersContLft > p > em {display: block;}
+.ourEsteemedPartnersLogos > img{max-width: 80%}
+
+.ourProjectWrap{padding: 100px 0 0;}
+.ourProjectHead{text-align: center;}
+.ourProjectHead > h5{font-size: 22px;line-height: 1.4em;font-family:var(--regular);font-weight: var(--normal);margin:0 0 15px;}
+.ourProjectHead > h3 > em{display: block;}
