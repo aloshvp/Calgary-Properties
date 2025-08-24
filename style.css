@@ -426,7 +426,7 @@ a {
 .bannerWrap::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -55px;
   left: 0;
   background-image: url('images/home/arch-black.svg');
   background-repeat: no-repeat;
@@ -465,9 +465,24 @@ a {
   /* above overlays */
 }
 
-/* Logo container */
 .headerLogo {
-  background-color: transparent;
+  position: relative;
+  top: -110px;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('images/home/logo-round.png') no-repeat center center;
+  background-size: contain;
+}
+
+.headerLogo img {
+  max-width: 50%;
+  max-height: 50%;
+  z-index: 1;
+  position: relative;
+  top: 90px;
 }
 
 /* Nav */
@@ -509,17 +524,6 @@ a {
   z-index: 5;
 }
 
-footer {
-  padding: 100px 80px 180px;
-  background-image: url('images/home/footer.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
 
 footer {
   position: relative;
@@ -530,7 +534,7 @@ footer {
   background-position: center center;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  /* gap: 30px; */
   z-index: 1;
   overflow: hidden;
   color: #fff;
@@ -568,8 +572,9 @@ footer>* {
 .footerContWrap {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 80px 0;
   border-bottom: 1px solid #fff;
+  gap: 100px;
 }
 
 .footerContWrap>div {
@@ -578,4 +583,41 @@ footer>* {
 
 .footerLinks {
   display: flex;
+  gap: 120px;
+}
+
+.footerLinks ul {
+  padding: 0;
+}
+
+.footerLinks ul li {
+  list-style: none;
+  padding: 0 0 10px;
+}
+
+.footerLinks ul li>a {
+  color: #fff;
+}
+
+.footerBottomWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0;
+}
+
+.footerBottomWrap>p {
+  margin: 0;
+}
+
+.aboutWrap {
+  padding: 0;
+  background-image: url('images/home/arch-white.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 80vh;
+  background-color: #dddd;
+  position: relative;
+  top: 0;
 }
