@@ -675,7 +675,7 @@ footer>* {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #9d9d9d;
   padding: 0 0 100px;
 }
 
@@ -687,7 +687,7 @@ footer>* {
   display: flex;
   justify-content: space-between;
   padding: 80px 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #9d9d9d;
   gap: 60px;
 }
 
@@ -717,11 +717,12 @@ footer>* {
 .footerBottomWrap {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0 0;
+  padding: 15px 0 0;
 }
 
 .footerBottomWrap>p {
   margin: 0;
+  font-size: 13px;
 }
 
 .footerDescription>h4 {
@@ -755,4 +756,8 @@ footer>* {
   background-repeat: no-repeat;
   background-size: 100%;
   content: ""
+}
+
+.footerBottomWrap .companyName {
+  color: #939393;
 }
